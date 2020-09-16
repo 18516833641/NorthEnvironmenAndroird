@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/c1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="历史曲线"
+            android:textColor="#07979d"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#07979d"
+        app:layout_constraintTop_toBottomOf="@id/c1" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintTop_toBottomOf="@id/view1">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="180dp">
+
+            <View
+                android:id="@+id/view_shu1"
+                android:layout_width="5dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="总系统"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/view_shu1"
+                app:layout_constraintStart_toEndOf="@id/view_shu1"
+                app:layout_constraintTop_toTopOf="@id/view_shu1" />
+
+            <TextView
+                android:id="@+id/tt1"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@mipmap/ic_ls_btn"
+                app:layout_constraintBottom_toBottomOf="@id/t1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/t1" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/shap_blue"
+                app:layout_constraintTop_toBottomOf="@id/t1" />
+
+            <View
+                android:id="@+id/view_shu2"
+                android:layout_width="5dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerview1" />
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="脱硫系统"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/view_shu2"
+                app:layout_constraintStart_toEndOf="@id/view_shu2"
+                app:layout_constraintTop_toTopOf="@id/view_shu2" />
+
+            <TextView
+                android:id="@+id/tt2"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@mipmap/ic_ls_btn"
+                app:layout_constraintBottom_toBottomOf="@id/t2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/t2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/shap_blue"
+                app:layout_constraintTop_toBottomOf="@id/t2" />
+
+
+            <View
+                android:id="@+id/view_shu3"
+                android:layout_width="5dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerview2" />
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="除尘系统"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/view_shu3"
+                app:layout_constraintStart_toEndOf="@id/view_shu3"
+                app:layout_constraintTop_toTopOf="@id/view_shu3" />
+
+            <TextView
+                android:id="@+id/tt3"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@mipmap/ic_ls_btn"
+                app:layout_constraintBottom_toBottomOf="@id/t3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/t3" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/shap_blue"
+                app:layout_constraintTop_toBottomOf="@id/t3" />
+
+            <View
+                android:id="@+id/view_shu4"
+                android:layout_width="5dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerview3" />
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="风机系统"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/view_shu4"
+                app:layout_constraintStart_toEndOf="@id/view_shu4"
+                app:layout_constraintTop_toTopOf="@id/view_shu4" />
+
+            <TextView
+                android:id="@+id/tt4"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@mipmap/ic_ls_btn"
+                app:layout_constraintBottom_toBottomOf="@id/t4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/t4" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/shap_blue"
+                app:layout_constraintTop_toBottomOf="@id/t4" />
+
+            <View
+                android:id="@+id/view_shu5"
+                android:layout_width="5dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerview4" />
+
+            <TextView
+                android:id="@+id/t5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="原料系统"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/view_shu5"
+                app:layout_constraintStart_toEndOf="@id/view_shu5"
+                app:layout_constraintTop_toTopOf="@id/view_shu5" />
+
+            <TextView
+                android:id="@+id/tt5"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@mipmap/ic_ls_btn"
+                app:layout_constraintBottom_toBottomOf="@id/t5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/t5" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/shap_blue"
+                app:layout_constraintTop_toBottomOf="@id/t5" />
+
+            <View
+                android:id="@+id/view_shu6"
+                android:layout_width="5dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerview5" />
+
+            <TextView
+                android:id="@+id/t6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="副产物系统"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/view_shu6"
+                app:layout_constraintStart_toEndOf="@id/view_shu6"
+                app:layout_constraintTop_toTopOf="@id/view_shu6" />
+
+            <TextView
+                android:id="@+id/tt6"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@mipmap/ic_ls_btn"
+                app:layout_constraintBottom_toBottomOf="@id/t6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/t6" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/shap_blue"
+                app:layout_constraintTop_toBottomOf="@id/t6" />
+
+            <View
+                android:id="@+id/view_shu7"
+                android:layout_width="5dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerview6" />
+
+            <TextView
+                android:id="@+id/t7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="水系统"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/view_shu7"
+                app:layout_constraintStart_toEndOf="@id/view_shu7"
+                app:layout_constraintTop_toTopOf="@id/view_shu7" />
+
+            <TextView
+                android:id="@+id/tt7"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@mipmap/ic_ls_btn"
+                app:layout_constraintBottom_toBottomOf="@id/t7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/t7" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/shap_blue"
+                app:layout_constraintTop_toBottomOf="@id/t7" />
+
+            <View
+                android:id="@+id/view_shu8"
+                android:layout_width="5dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerview7" />
+
+            <TextView
+                android:id="@+id/t8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="气系统"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/view_shu8"
+                app:layout_constraintStart_toEndOf="@id/view_shu8"
+                app:layout_constraintTop_toTopOf="@id/view_shu8" />
+
+            <TextView
+                android:id="@+id/tt8"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@mipmap/ic_ls_btn"
+                app:layout_constraintBottom_toBottomOf="@id/t8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/t8" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/shap_blue"
+                app:layout_constraintTop_toBottomOf="@id/t8" />
+
+            <View
+                android:id="@+id/view_shu9"
+                android:layout_width="5dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerview8" />
+
+            <TextView
+                android:id="@+id/t9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="烟气系统"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/view_shu9"
+                app:layout_constraintStart_toEndOf="@id/view_shu9"
+                app:layout_constraintTop_toTopOf="@id/view_shu9" />
+
+            <TextView
+                android:id="@+id/tt9"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@mipmap/ic_ls_btn"
+                app:layout_constraintBottom_toBottomOf="@id/t9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/t9" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/shap_blue"
+                app:layout_constraintTop_toBottomOf="@id/t9" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

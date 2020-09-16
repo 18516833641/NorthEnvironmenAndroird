@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/suolue_iv"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="四大佛教历史开发建设了eroweuwofw手机打发时间翻领宽松的索朗多吉发生了房间是时代雷锋精神疗法"
+        android:maxLines="2"
+        android:textColor="@color/colorAccent"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@id/mark_iv"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/suolue_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mark_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@mipmap/ic_go"
+        app:layout_constraintBottom_toBottomOf="@id/title_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title_tv" />
+
+    <TextView
+        android:id="@+id/xq_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@mipmap/ic_ck"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:text="查看详情"
+        android:textColor="#0bd9ed"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/suolue_iv"
+        app:layout_constraintStart_toEndOf="@id/suolue_iv" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@id/suolue_iv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
